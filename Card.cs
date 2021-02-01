@@ -7,13 +7,13 @@ namespace cardGameSix
     public class Card
     {
         public CardValue cardValue;
-        public CardSign cardSign;
+        public CardSuite cardSign;
         public static CardValue[] values = { (CardValue)9, (CardValue)10, (CardValue)12, (CardValue)13, (CardValue)14, (CardValue)15 };
         // All possible values for a card for the deck formation.
 
-        public static CardSign[] signs = { CardSign.HEARTS, CardSign.DIAMONDS, CardSign.SPADES, CardSign.CLUBS };
+        public static CardSuite[] signs = { CardSuite.HEARTS, CardSuite.DIAMONDS, CardSuite.SPADES, CardSuite.CLUBS };
         // All possible signs for a card for the deck formation.
-        public Card(CardValue value, CardSign sign)
+        public Card(CardValue value, CardSuite sign)
         {
             this.cardValue = value;
             this.cardSign = sign;
@@ -62,22 +62,22 @@ namespace cardGameSix
             // Asociating the value of the card to the name.
             switch (cardSign)
             {
-                case CardSign.SPADES:
+                case CardSuite.SPADES:
                     {
                         name += "S";
                         break;
                     }
-                case CardSign.CLUBS:
+                case CardSuite.CLUBS:
                     {
                         name += "C";
                         break;
                     }
-                case CardSign.DIAMONDS:
+                case CardSuite.DIAMONDS:
                     {
                         name += "D";
                         break;
                     }
-                case CardSign.HEARTS:
+                case CardSuite.HEARTS:
                     {
                         name += "H";
                         break;
