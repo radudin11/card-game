@@ -6,51 +6,51 @@ namespace cardGameSix
 {
     public class Card
     {
-        public Value value;
-        public Sign sign;
-        public static Value[] values = { (Value)9, (Value)10, (Value)12, (Value)13, (Value)14, (Value)15 };
+        public CardValue cardValue;
+        public CardSign cardSign;
+        public static CardValue[] values = { (CardValue)9, (CardValue)10, (CardValue)12, (CardValue)13, (CardValue)14, (CardValue)15 };
         // All possible values for a card for the deck formation.
 
-        public static Sign[] signs = { Sign.HEARTS, Sign.DIAMONDS, Sign.SPADES, Sign.CLUBS };
+        public static CardSign[] signs = { CardSign.HEARTS, CardSign.DIAMONDS, CardSign.SPADES, CardSign.CLUBS };
         // All possible signs for a card for the deck formation.
-        public Card(Value value, Sign sign)
+        public Card(CardValue value, CardSign sign)
         {
-            this.value = value;
-            this.sign = sign;
+            this.cardValue = value;
+            this.cardSign = sign;
         }
 
         override public string ToString()
         {
             string name = "";
           
-            switch (value)
+            switch (cardValue)
             {
-                case Value.ACE:
+                case CardValue.ACE:
                     {
                         name += "A";
                         break;
                     }
-                case Value.JACK:
+                case CardValue.JACK:
                     {
                         name += "J";
                         break;
                     }
-                case Value.QUEEN:
+                case CardValue.QUEEN:
                     {
                         name += "Q";
                         break;
                     }
-                case Value.KING:
+                case CardValue.KING:
                     {
                         name += "K";
                         break;
                     }
-                case Value.TEN:
+                case CardValue.TEN:
                     {
                         name += "10";
                         break;
                     }
-                case Value.NINE:
+                case CardValue.NINE:
                     {
                         name += "9";
                         break;
@@ -60,24 +60,24 @@ namespace cardGameSix
 
             }
             // Asociating the value of the card to the name.
-            switch (sign)
+            switch (cardSign)
             {
-                case Sign.SPADES:
+                case CardSign.SPADES:
                     {
                         name += "S";
                         break;
                     }
-                case Sign.CLUBS:
+                case CardSign.CLUBS:
                     {
                         name += "C";
                         break;
                     }
-                case Sign.DIAMONDS:
+                case CardSign.DIAMONDS:
                     {
                         name += "D";
                         break;
                     }
-                case Sign.HEARTS:
+                case CardSign.HEARTS:
                     {
                         name += "H";
                         break;
