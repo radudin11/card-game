@@ -8,17 +8,19 @@ namespace cardGameSix
     {
         public CardValue cardValue;
         public CardSuite cardSign;
+        //Possible values.
         public static CardValue[] values = { (CardValue)9, (CardValue)10, (CardValue)12, (CardValue)13, (CardValue)14, (CardValue)15 };
-        // All possible values for a card for the deck formation.
-
-        public static CardSuite[] signs = { CardSuite.HEARTS, CardSuite.DIAMONDS, CardSuite.SPADES, CardSuite.CLUBS };
-        // All possible signs for a card for the deck formation.
+       
+        //Possible suites.
+        public static CardSuite[] suites = { CardSuite.HEARTS, CardSuite.DIAMONDS, CardSuite.SPADES, CardSuite.CLUBS };
+        
         public Card(CardValue value, CardSuite sign)
         {
             this.cardValue = value;
             this.cardSign = sign;
         }
 
+        //Card value => card name.
         override public string ToString()
         {
             string name = "";
@@ -59,7 +61,8 @@ namespace cardGameSix
 
 
             }
-            // Asociating the value of the card to the name.
+         
+            //Card suite => card name.
             switch (cardSign)
             {
                 case CardSuite.SPADES:
@@ -85,7 +88,7 @@ namespace cardGameSix
 
 
             }
-            // Asociating the sign of the card to the name.
+           
 
             return name;
         }
