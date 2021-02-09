@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace cardGameSix
 {
-    
+    /**
+     * MAN PROGRAM
+     */
     static class Program
     {
         
         static void Main(string[] args)
         {
-            
             Deck deck = new Deck();
             PlayerHand playerHand = new PlayerHand();
             deck.Print();
