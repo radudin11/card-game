@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace cardGameSix
 {
-    
+
+    /**
+     * Deck class represents pile of all posible cards based onb Suite and Values
+     */
     public class Deck
     {
         Stack<Card> deck = new Stack<Card>();
@@ -27,13 +29,14 @@ namespace cardGameSix
                 Console.Write(card + " ");
             }
         }
+
         //Deck creation.
         public Deck()
         {
             deck = new Stack<Card>();
-            foreach (CardValue v in Card.values)
+            foreach (CardValue v in Enum.GetValues(typeof(CardValue)))
             {
-                foreach (CardSuite s in Card.suites)
+                foreach (CardSuite s in Enum.GetValues(typeof(CardSuite)))
                 {
                     Card card = new Card(v, s);
                     deck.Push(card);
