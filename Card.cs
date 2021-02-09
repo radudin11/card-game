@@ -9,14 +9,20 @@ namespace cardGameSix
         public CardValue cardValue;
         public CardSign cardSign;
         public static CardValue[] values = { (CardValue)9, (CardValue)10, (CardValue)12, (CardValue)13, (CardValue)14, (CardValue)15 };
-        // All possible values for a card for the deck formation.
+        
 
         public static CardSign[] signs = { CardSign.HEARTS, CardSign.DIAMONDS, CardSign.SPADES, CardSign.CLUBS };
-        // All possible signs for a card for the deck formation.
+        
         public Card(CardValue value, CardSign sign)
         {
             this.cardValue = value;
             this.cardSign = sign;
+        }
+
+        public Card()
+        {
+            this.cardValue = 0;
+            this.cardSign = 0;
         }
 
         override public string ToString()
@@ -59,7 +65,7 @@ namespace cardGameSix
 
 
             }
-            // Asociating the value of the card to the name.
+           
             switch (cardSign)
             {
                 case CardSign.SPADES:
@@ -85,7 +91,7 @@ namespace cardGameSix
 
 
             }
-            // Asociating the sign of the card to the name.
+            
 
             return name;
         }
