@@ -14,11 +14,7 @@ namespace cardGameSix
             PlayerHand radu = new PlayerHand();
             PlayerHand tata = new PlayerHand();
 
-            deck.Print();
             deck.Shuffle();
-            Console.WriteLine();
-            deck.Print();
-            Console.WriteLine();
 
             // start game
             Console.WriteLine();

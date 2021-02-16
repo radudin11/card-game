@@ -6,46 +6,44 @@ namespace cardGameSix
      * Card value class represents the number of a card
      */
     //Card calue class and numeric value for each type of card.
-    public enum CardValue : int { NINE = 9, TEN = 10, JACK = 12, QUEEN = 13, KING = 14, ACE = 15 }
-
-
-    // Define an extension method in a non-nested static class.
-    public static class ExtensionsCardValue
+    public class CardValue
     {
-        //public static CardValueminPassing = Grades.D;
-        public static String Display(this CardValue cardValue)
+        int value;
+
+        public CardValue(int i)
         {
-            
-            switch (cardValue)
+            value = i;
+        }
+
+        public String Display()
+        {
+
+            switch (value)
             {
-                case CardValue.ACE:
+                case 15:
                     {
                         return "A";
                     }
-                case CardValue.JACK:
-                    {
-                        return  "J";
-                        
-                    }
-                case CardValue.QUEEN:
-                    {
-                        return  "Q";
-                        
-                    }
-                case CardValue.KING:
+                case 14:
                     {
                         return "K";
                     }
-                case CardValue.TEN:
+                case 13:
                     {
-                        return "10";
+                        return "Q";
+
                     }
-                case CardValue.NINE:
+                case 12:
                     {
-                        return  "9";
+                        return "J";
+
                     }
+
+                    
             }
-            return "?";
+            return ""+value;
         }
     }
+
+  
 }

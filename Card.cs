@@ -8,9 +8,9 @@
         public CardValue cardValue;
         public CardSuite cardSuite;
         
-        public Card(CardValue value, CardSuite suite)
+        public Card(int value, CardSuite suite)
         {
-            this.cardValue = value;
+            this.cardValue = new CardValue(value);
             this.cardSuite = suite;
         }
 
