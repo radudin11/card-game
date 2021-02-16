@@ -6,25 +6,25 @@ namespace cardGameSix
 {
 
     /**
-     * Deck class represents pile of all posible cards based onb Suite and Values
+     * Deck class represents pile of all posible cards based on Suite and Values
      */
     public class Deck
     {
-        Stack<Card> deck = new Stack<Card>();
+        private Stack<Card> cards = new Stack<Card>();
 
         //Deck shuffle. 
         public void Shuffle()
         {
             var rnd = new Random();
-            var values = deck.ToArray();
-            deck.Clear();
+            var values = cards.ToArray();
+            cards.Clear();
             foreach (var value in values.OrderBy(x => rnd.Next()))
-                deck.Push(value);
+                cards.Push(value);
         }
 
         public void Print()
         {
-            foreach (Card card in deck)
+            foreach (Card card in cards)
             {
                 Console.Write(card + " ");
             }
@@ -33,13 +33,12 @@ namespace cardGameSix
         //Deck creation.
         public Deck()
         {
-            deck = new Stack<Card>();
+            cards = new Stack<Card>();
             foreach (CardValue v in Enum.GetValues(typeof(CardValue)))
             {
                 foreach (CardSuite s in Enum.GetValues(typeof(CardSuite)))
                 {
-                    Card card = new Card(v, s);
-                    deck.Push(card);
+                    cards.Push(new Card(v, s));
                 }
             }
         }
@@ -47,10 +46,13 @@ namespace cardGameSix
             
         public Card Pop()
         {
-            Card card = deck.Pop();
-                return card;
+            return cards.Pop();
         }
-        
-        
+
+        public Stack<Card> getCard()
+        {
+            return cards;
+        }
+
     }
 }

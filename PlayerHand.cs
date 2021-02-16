@@ -1,44 +1,71 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace cardGameSix
 {
+    /**
+     * Each player hand will hold 5 cards
+     */
     class PlayerHand
     {
-        //public static Card nullCard = new Card(0, 0);
-        List<Card> playerHand = new List<Card>();
-        
-       
-        
-        public void Insert(int pos, Card card)
-        {
-            playerHand[pos] = card;
-        }
 
-        public void Fill(Deck deck)
+        List<Card> cards = new List<Card>();
+        
+
+        public Card ExtractCard(int pos)
         {
-            for(int count = 0; count < 4; count++)
+            if (cards[pos] == null)
             {
-                playerHand.Add(deck.Pop());
+                throw new Exception("not possible");
             }
+            Card card = cards[pos];
+            cards.RemoveAt(pos);
+            return card;
         }
 
-        public Card Extract(int pos)
-        {
-            Card card = playerHand[pos];
-            playerHand.RemoveAt(pos);
-            return card;
 
+        public void InsertCard(int pos, Card card)
+        {
+            if (cards[pos] != null)
+            {
+                throw new Exception("not possible");
+            }
+            cards[pos] = card;
+        }
+
+
+        public static PlayerHand FillHand(Deck deck)
+        {
+            if (deck.getCard().Count < 5)
+            {
+                throw new Exception("not possible");
+            }
+            PlayerHand playerHand = new PlayerHand();
+
+            for (int count = 0; count < 5; count++)
+            {
+                playerHand.GetCards().Add(deck.Pop());
+            }
+            return playerHand;
         }
 
         public void Print()
         {
-            foreach(Card card in playerHand)
+            foreach (Card card in cards)
             {
-                Console.Write(card+" ");
+                Console.Write(card + " ");
             }
             Console.WriteLine();
         }
+
+
+        public List<Card> GetCards()
+        {
+            return cards;
+        }
     }
+
+
+
+
 }
