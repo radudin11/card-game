@@ -19,19 +19,19 @@ namespace cardGameSix
             {
                 case CardSuite.SPADES:
                     {
-                        return "S";
+                        return "s";
                     }
                 case CardSuite.CLUBS:
                     {
-                        return "C";
+                        return "c";
                     }
                 case CardSuite.DIAMONDS:
                     {
-                        return "D";
+                        return "d";
                     }
                 case CardSuite.HEARTS:
                     {
-                        return "H";
+                        return "h";
                     }
 
             }
