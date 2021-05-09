@@ -34,11 +34,12 @@ namespace cardGameSix
         public Deck()
         {
             cards = new Stack<Card>();
-            foreach (CardValue v in Enum.GetValues(typeof(CardValue)))
-            {
+            //foreach (CardValue v in Enum.GetValues(typeof(CardValue)))
+            for (int i = 2; i < 16; i++)
+            { 
                 foreach (CardSuite s in Enum.GetValues(typeof(CardSuite)))
                 {
-                    cards.Push(new Card(v, s));
+                    cards.Push(new Card(i, s));
                 }
             }
         }
