@@ -36,10 +36,14 @@ namespace cardGameSix
             cards = new Stack<Card>();
             //foreach (CardValue v in Enum.GetValues(typeof(CardValue)))
             for (int i = 2; i < 16; i++)
-            { 
-                foreach (CardSuite s in Enum.GetValues(typeof(CardSuite)))
+            {
+                if (i != 11)
                 {
-                    cards.Push(new Card(i, s));
+
+                    foreach (CardSuite s in Enum.GetValues(typeof(CardSuite)))
+                    {
+                        cards.Push(new Card(i, s));
+                    }
                 }
             }
         }

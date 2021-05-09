@@ -16,26 +16,36 @@ namespace cardGameSix
 
             deck.Shuffle();
 
-            // start game
+            //game setup
             Console.WriteLine();
-            radu = PlayerHand.FillHand(deck);
-            tata = PlayerHand.FillHand(deck);
+            
+            radu = PlayerHand.FillHand(deck , 26);
+            tata = PlayerHand.FillHand(deck , 26);
 
-
+            Console.WriteLine("-----------------------");
             Console.WriteLine("Radu");
             radu.Print();
+            Console.WriteLine("-----------------------");
             Console.WriteLine("Tata");
             tata.Print();
+            Console.WriteLine("-----------------------");
 
-            Card trump = deck.getCard().Pop();
-            Console.WriteLine("TRUMP CARD = " + trump);
-            
-
-            while (deck.getCard().Count > 0)
+            //play game
+            //game over when 1 hand is empty
+            while(radu.GetCards().Count !=0 && tata.GetCards().Count != 0)
             {
-                Card card = deck.Pop();
-                Console.WriteLine(card);
+                //extract from radu && tata hands the first card and compare
+                //          higher value keeps both cards in playerHand
+                //         if equal
+                //              get value of card
+                //              if not enough cards
+                //                 extract min length of both hands and 
+                //              else
+                //                  they extract <value> cards form hand and cycle back
+                
             }
+
+
 
 
 

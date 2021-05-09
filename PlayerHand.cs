@@ -34,15 +34,15 @@ namespace cardGameSix
         }
 
 
-        public static PlayerHand FillHand(Deck deck)
+        public static PlayerHand FillHand(Deck deck, int nrCards)
         {
-            if (deck.getCard().Count < 5)
+            if (deck.getCard().Count < nrCards)
             {
                 throw new Exception("not possible");
             }
             PlayerHand playerHand = new PlayerHand();
 
-            for (int count = 0; count < 5; count++)
+            for (int count = 0; count < nrCards; count++)
             {
                 playerHand.GetCards().Add(deck.Pop());
             }
