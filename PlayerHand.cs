@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace cardGameSix
 {
     /**
-     * Each player hand will hold 5 cards
+     * Each player hand will hold x cards
      */
     class PlayerHand
     {

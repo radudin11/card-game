@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace cardGameSix
 {
     /**
-     * MAN PROGRAM
+     * MAIN PROGRAM
      */
     
     static class Program
@@ -50,9 +50,7 @@ namespace cardGameSix
                     return 2;
                 if (Player2.GetCards().Count == 0)
                     return 1;
-                Console.WriteLine(card2.cardValue.GetValue());
-                Console.WriteLine(Player1.GetCards().Count);
-                Console.WriteLine(Player2.GetCards().Count);
+                
                 Console.WriteLine("tata:");
                 Player1.Print();
                 Console.WriteLine("radu:");
@@ -120,11 +118,7 @@ static void Main(string[] args)
                 Console.WriteLine("--------------------------");
 
 
-                //              get value of card
-                //              if not enough cards
-                //                 extract min length of both hands and 
-                //              else
-                //                  they extract <value> cards form hand and cycle back
+               
 
             }
             Console.WriteLine("tata:");
