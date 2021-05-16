@@ -9,10 +9,11 @@ namespace cardGameSix
         String name;
         PlayerHand playerHand = new PlayerHand();
        
-
-        public void drawCard(int pos)
+        public PlayerHand GetHand()
         {
-            
+            return playerHand;
         }
+
+       
     }
 }

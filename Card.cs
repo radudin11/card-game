@@ -7,6 +7,7 @@
     {
         public CardValue cardValue;
         public CardSuite cardSuite;
+
         
         public Card(int value, CardSuite suite)
         {
@@ -16,5 +17,7 @@
 
         //Card value => card name.
         override public string ToString() => cardValue.Display() + cardSuite.Display();
+
+       
     }
 }

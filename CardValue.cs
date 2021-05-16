@@ -43,6 +43,11 @@ namespace cardGameSix
             }
             return ""+value;
         }
+
+        public int GetValue()
+        {
+            return value;
+        }
     }
 
   
