@@ -3,3 +3,5 @@ bin/
 obj/
 Explicatii/
 
+.vscode/launch.json
+.vscode/tasks.json
